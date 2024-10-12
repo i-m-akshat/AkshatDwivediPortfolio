@@ -65,27 +65,26 @@ body{
     color: black !important;
     /* border-radius: 40%; */
 }
-.ImgContainer{
-    height: 600px;
-    width: 600px;
-    border-radius: 50%;
-    display: flex;
-    justify-content:end;
-    align-items: center;
-
+.ImgContainer {
+  height: 600px;
+  width: 600px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
 .circular-image {
-    width:500px; /* Set your desired width */
-    height: 500px; /* Set your desired height */
-    border-radius: 50%; /* Makes the image circular */
-    object-fit: cover; /* Ensures the image fits the container without distortion */
-
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 .circular-image-about {
-    width:500px; /* Set your desired width */
-    height: 500px; /* Set your desired height */
-    border-radius: 50%; /* Makes the image circular */
-    object-fit: cover; /* Ensures the image fits the container without distortion */
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  object-fit: cover;
     border: 3.5px solid #FFD700;
 }
 
@@ -337,7 +336,10 @@ transition: 0.5s ease-in-out;
     color: #A8DADC;
     
   }
-  
+  .rowIntrobuttons{
+    display: flex;
+    flex-direction: row;
+  }
   .roller #rolltext {
     position: absolute;
     top: 0;
@@ -390,3 +392,21 @@ transition: 0.5s ease-in-out;
     }
   }
   }
+
+  @media (min-width: 280px) and (max-width: 600px) {
+    .ImgContainer {
+        height: 300px;
+        width: 300px;
+    }
+
+    .circular-image {
+      margin-top: 16px;
+        width: 300px;
+        height: 300px;
+    }
+    .circular-image-about {
+      margin-top: 16px;
+      width: 300px;
+      height: 300px;
+  }
+}
