@@ -20,7 +20,8 @@
   } */
 body{
     font-family: 'Source Code Pro', monospace;
-    background:linear-gradient(to right,#000000,#434343);
+    /* background:linear-gradient(to right,#000000,#434343); */
+    background-color: black !important;
     /* background:linear-gradient(to right,#9796f0,#fbc7d4); */
     /* background:linear-gradient(to right,#B993D6,#8CA6DB); */
     /* background:linear-gradient(to right,#7F00FF,#E100FF); */
@@ -121,7 +122,7 @@ transition: 0.5s ease-in-out;
 
 .cardGlass:hover{
     /* box-shadow: 0 8px 32px 0 #FFD700; */
-    box-shadow: 0 8px 32px 0 white;
+    box-shadow: 0 2px 7px 0 white;
 }
 
 
@@ -345,7 +346,78 @@ transition: 0.5s ease-in-out;
     top: 0;
     animation: slide 5s infinite;  
   }
-  
+
+.flip-card {
+  padding-top: 20px;
+   background-color: transparent;
+   border-radius: 20%;
+   height: 350px;
+   width: 350px;
+   perspective: 1000px; /* Perspective for 3D effect */
+   margin: 0 auto; /* Center the card horizontally */
+   display: flex; /* Use flexbox to align children */
+   align-items: center; /* Center content vertically */
+   justify-content: center; /* Center content horizontally */
+   text-decoration: none;
+ }
+ 
+ /* Flip Card Inner */
+ .flip-card-inner {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   text-align: center;
+   transition: transform 0.6s;
+   transform-style: preserve-3d;
+   border-radius: 20%;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   
+ }
+ .flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container */
+  border-radius: inherit; /* Inherit border radius for rounded corners */
+}
+
+ .flip-card:hover .flip-card-inner {
+   transform: rotateY(180deg);
+ }
+
+ .flip-card-front, .flip-card-back {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   border-radius: 20%; 
+   backface-visibility: hidden;
+   display: flex;
+   align-items: center; 
+   justify-content: center; 
+   text-align: center;
+   flex-direction: column;
+   overflow: hidden;
+ }
+ 
+ /* Front Side */
+ .flip-card-front {
+
+   color: white; 
+   border: 1px solid #FFD700;
+   
+ }
+ 
+ /* Back Side */
+ .flip-card-back {
+   background-color: transparent;
+   color: white;
+   transform: rotateY(180deg);
+   box-shadow: 0 4px 12px 0 #FFD700;
+   padding-right:5px;
+   padding-left:5px;
+ }
+ .flip-card-back img{
+   border-radius: 100%;
+ }
   @keyframes slide {
     0%{
       top:0;
@@ -362,9 +434,11 @@ transition: 0.5s ease-in-out;
   }
   @media screen and (max-width: 600px){
    
-    
+    #txtRole{
+      font-size: 18px;
+    }
     .roller{
-    height: 2.6rem; 
+    height: 2.2rem; 
     line-height: 2.125rem;  
     }
     
@@ -408,5 +482,79 @@ transition: 0.5s ease-in-out;
       margin-top: 16px;
       width: 300px;
       height: 300px;
+  }
+}
+/* Media Queries for Responsiveness */
+@media (max-width: 576px) {
+  .flip-card {
+    width: 200px; /* Smaller size on smaller screens */
+    height: 200px; /* Maintain square aspect ratio */
+  }
+  
+  .flip-card-back p {
+    font-size: 11px;
+  }
+  .cardGlass {
+    width: 100%; /* Full width on small screens */
+    max-width: 300px; /* Restricts max width for centered alignment */
+    margin: 10px auto; /* Adds space around each card for spacing */
+    text-align: center; /* Centers text in card */
+  }
+
+  .cardGlass h5 {
+    font-size: 13px; /* Smaller font for small screens */
+  }
+  #rowFlip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .col-4 {
+    width: 100%; /* Full width on small screens */
+    max-width: 300px; /* Limits the card width for better alignment */
+    margin-bottom: 20px; /* Adds space between the cards */
+  }
+
+  .mainHeading {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .flip-card {
+    width: 200px; /* Adjust size for medium screens */
+    height: 200px; /* Maintain square aspect ratio */
+  }
+  
+  .flip-card-back p {
+    font-size: 11px;
+  }
+  
+  #rowFlip {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .cardGlass {
+    width: 100%; /* Full width on small screens */
+    max-width: 300px; /* Restricts max width for centered alignment */
+    margin: 10px auto; /* Adds space around each card for spacing */
+    text-align: center; /* Centers text in card */
+  }
+
+  .cardGlass h5 {
+    font-size: 13px; /* Smaller font for small screens */
+  }
+  .col-4 {
+    width: 100%; /* Full width for medium screens */
+    max-width: 300px; /* Limits the card width for better alignment */
+    margin-bottom: 20px; /* Adds space between the cards */
+  }
+
+  .mainHeading {
+    font-size: 25px;
   }
 }

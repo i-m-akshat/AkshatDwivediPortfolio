@@ -22,21 +22,21 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto ms-auto">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="#Main">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">About me</a>
+                    <a class="nav-link" href="#AboutMe">About me</a>
                   </li>
                  
                   <li class="nav-item">
-                    <a class="nav-link" aria-disabled="true">Projects</a>
+                    <a class="nav-link" aria-disabled="true" href="#Projects">Projects</a>
                   </li>
 
                   <li class="nav-item">
-                    <a class="nav-link" aria-disabled="true">Projects</a>
+                    <a class="nav-link" aria-disabled="true" href="#contactMe">Contact me</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" aria-disabled="true">Projects</a>
+                    <a class="nav-link" aria-disabled="true" href="#Skills">Skills</a>
                   </li>
                 </ul>
                 <!-- <form class="d-flex" role="search">
@@ -56,7 +56,7 @@
           <div class="container-fluid">
          
               <!--Intro-->  
-         <section class="row d-flex justify-content-between align-items-center">
+         <section class="row d-flex justify-content-between align-items-center" id="Main">
     <div class="col-md-6 mt-3 ps-5">
         <span>
             <h1 class="text-start" style="font-size: 50px;">
@@ -65,7 +65,7 @@
             <h3 class="text-start mt-4" style="font-size: 50px;">
                 I am <span class="text-violet">Akshat Dwivedi</span>
             </h3>
-            <h4 class="text-start mt-4">
+            <h4 class="text-start mt-4" id="txtRole">
                 <div class="roller">
                    <span class="text-white">A Passionate&nbsp;</span>
                    <span class="text-violet"><span id="rolltext"> .NET Developer<br/>Backend Developer<br/>Full Stack Developer<br/></span> </span></div>
@@ -79,19 +79,19 @@
                 <div class="row" id="rowIntrobuttons">
                     <!-- GitHub Button -->
                     <div class="col-4 col-md-2 mt-1 px-2">
-                        <a class="btn btnViolet w-100" role="button">
+                        <a class="btn btnViolet w-100" role="button" href="https://github.com/i-m-akshat" target="_blank">
                             <i class="fa-brands fa-github"></i>
                         </a>
                     </div>
                     <!-- LinkedIn Button -->
                     <div class="col-4 col-md-2 mt-1 px-2">
-                        <a class="btn btnViolet w-100" role="button">
+                        <a class="btn btnViolet w-100" role="button" href="https://www.linkedin.com/in/imakshatdwivedi/" target="_blank">
                             <i class="fa-brands fa-linkedin"></i>
                         </a>
                     </div>
                     <!-- Instagram Button -->
                     <div class="col-4 col-md-2 mt-1 px-2">
-                        <a class="btn btnViolet w-100" role="button">
+                        <a class="btn btnViolet w-100" role="button" href="https://www.instagram.com/i__m__akshat/" target="_blank">
                             <i class="fa-brands fa-square-instagram"></i>
                         </a>
                     </div>
@@ -114,18 +114,15 @@
         <div class="row justify-content-end align-items-end d-flex">
             <div class="col-md-2 mx-1 col-sm-6">
                 <div class="glass px-1 mt-1" style="border-radius: 10px;">
-                    <h5 class="text-center py-2">
-                        11:15 AM
-                    </h5>
+                    <h5 class="text-center py-2" id="txtTime"></h5> <!-- Current Time will be displayed here -->
                 </div>
             </div>
             <div class="col-md-2 mx-1 col-sm-6">
                 <div class="glass px-1 mt-1" style="border-radius: 10px;">
-                    <h5 class="text-center py-2">
-                        Saturday
-                    </h5>
+                    <h5 class="text-center py-2" id="txtDay"></h5> <!-- Current Day will be displayed here -->
                 </div>
             </div>
+            
         </div>
         <div class="ImgContainer d-flex justify-content-center">
             <img src="Assets/Images/Yellow desk.gif" class="circular-image"/>
@@ -134,7 +131,7 @@
         </section>
 <!--intro end-->
 <!--About me-->
-            <section class="row d-flex justify-content-center align-items-center mt-5">
+            <section class="row d-flex justify-content-center align-items-center mt-5" id="AboutMe">
                 <h1 class="text-center text-violet">
                    About Me
                 </h1>
@@ -143,7 +140,8 @@
                         
                         <div class="col-md-6">
                             <div class="ImgContainer">
-                                <img src="Assets/Images/Spy.gif"  class="d-flex circular-image-about"/>
+                                <!-- <img src="Assets/Images/Spy.gif"  class="d-flex circular-image-about"/> -->
+                                <img src="Assets/Images/itachi.gif"  class="d-flex circular-image-about"/>
                             </div>
                         </div>
                         <div class="col-md-6 px-3 cardGlass py-5 my-5">
@@ -154,7 +152,7 @@
             </section>
             <!--About me end-->
             <!--Skills-->
-            <section class="row d-flex justify-content-center align-items-center mt-5">
+            <section class="row d-flex justify-content-center align-items-center mt-5" id="Skills">
                 <h1 class="text-center text-violet">
                    Skills
                 </h1>
@@ -195,11 +193,77 @@
             </section>
             <!--Skills-->
             <!--Journey so far -->
-
+            <section class="row d-flex justify-content-center align-items-center mt-5" id="Projects">
+                <h1 class="text-center text-violet">
+                    Projects
+                 </h1>
+                <div class="col-12 mt-2">
+                    <div class="row justify-content-center align-items-center d-flex" id="rowFlip">
+                        <div class="col-4">
+                          
+                                <a class="flip-card" href="https://github.com/i-m-akshat/Online_Food_Application" target="_blank">
+                                    <div class="flip-card-inner">
+                                      <div class="flip-card-front">
+                                        
+                                         
+                                                <img class="img-fluid" src="Assets/Images/OnlineFoodApplciation.jpeg"/>
+                                            
+                                      </div>
+                                      <div class="flip-card-back">
+                                        <!-- <img src="biocon.jpg" style="height: 100px; width: 150px;"> -->
+                                        <p class="text-violet">Online Food Application</p> 
+                                        <p class="mt-2">A .NET Core-based web application enabling restaurant and café owners to manage their menu items, customer orders, and administrative roles. Customers can browse and purchase food items offered by owners too.</p>
+                                      </div>
+                                    </div>
+                                </a>
+                            
+                        </div>
+                        <div class="col-4">
+                            <a class="flip-card" href="https://ayodhyadhaam.vercel.app/" target="_blank">
+                                <div class="flip-card-inner">
+                                  <div class="flip-card-front">
+                                    
+                                     
+                                            <img class="img-fluid" src="Assets/Images/AyodhyaDhaam.jpeg"/>
+                                        
+                                  </div>
+                                  <div class="flip-card-back">
+                                    <!-- <img src="biocon.jpg" style="height: 100px; width: 150px;"> -->
+                                    <p class="text-violet">Ayodhya Dhaam</p> 
+                                    <p class="mt-2">AyodhyaDham is a PERN stack-based web app that serves as a virtual tour guide for Ayodhya, India, offering an immersive digital experience to attract visitors nationwide.</p>
+                                  </div>
+                                </div>
+                            </a>
+                        
+                    </div>
+                    <div class="col-4">
+                          
+                        <a class="flip-card" href="https://github.com/i-m-akshat/Hotel-Reservation-System" target="_blank">
+                            <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                
+                                 
+                                        <img class="img-fluid" src="Assets/Images/HotelBooking.png"/>
+                                    
+                              </div>
+                              <div class="flip-card-back">
+                                <!-- <img src="biocon.jpg" style="height: 100px; width: 150px;"> -->
+                                <p class="text-violet">Basera : Hotel Reservation</p> 
+                                <p class="mt-2">Basera is an advanced hotel reservation system being developed to simplify the booking process and enhance user experience. It utilizes the FlexiServe Architecture, combining a backend with a layered frontend to create a scalable, modular, and user-friendly solution.</p>
+                              </div>
+                            </div>
+                        </a>
+                    
+                </div>
+                    </div>
+                    
+                </div>
+                <center><button class="btn btn-sm btn-outline-light my-5">View All</button></center>
+            </section>
             <!--Journery so far end -->
             
             <!--Contact me-->
-            <section class="row d-flex justify-content-center align-items-center mt-5">
+            <section class="row d-flex justify-content-center align-items-center mt-5" id="contactMe">
                 <h1 class="text-center text-violet">
                    Contact Me
                 </h1>
@@ -217,7 +281,7 @@
                             </div>
                             <div class="col-6 mt-2 pt-3">
                                 <div class="d-flex justify-content-center align-items-center">
-                                    <button class="btn btn-sm btn-outline-success">Submit</button>
+                                    <button class="btn btn-sm btn-outline-light">Submit</button>
                                 </div>
                                 
                             </div>
@@ -225,7 +289,8 @@
                         </div>
                         <div class="col-md-6">
                             <div class="ImgContainer">
-                                <img src="Assets/Images/Contact tracing _ Explainer Video.gif"  class="d-flex circular-image-about"/>
+                                <!-- <img src="Assets/Images/Contact tracing _ Explainer Video.gif"  class="d-flex circular-image-about"/> -->
+                                <img src="Assets/Images/contactMe.gif"  class="d-flex circular-image-about"/>
                             </div>
                         </div>
                     </div>
@@ -236,6 +301,28 @@
           
               </div>
           </div>
+          <script>
+            const now = new Date();
+            const dayOfWeek = now.getDay();
+            let hours = now.getHours();
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+            const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            const currentDay = days[dayOfWeek];
+        
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12;
+            hours = hours ? hours : 12; // the hour '0' should be '12'
+            const currentTime = `${hours}:${minutes < 10 ? '0' + minutes : minutes} ${ampm}`;
+        
+            var txtTime = document.getElementById('txtTime');
+            txtTime.innerText = currentTime; // Changed from value to innerText
+            var txtDay = document.getElementById('txtDay');
+            txtDay.innerText = currentDay; // Changed from value to innerText
+        
+            console.log(`Current Day: ${currentDay}`);
+            console.log(`Current Time: ${currentTime}`);
+        </script>
           <!--body end-->
         <script src="Assets/bootstrap/js/bootstrap.min.js"></script>
         <script src="Assets/bootstrap/js/bootstrap.bundle.min.js"></script>
