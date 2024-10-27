@@ -26,6 +26,11 @@ body{
     /* background:linear-gradient(to right,#B993D6,#8CA6DB); */
     /* background:linear-gradient(to right,#7F00FF,#E100FF); */
     color:whitesmoke !important;
+    overflow-y: scroll;       /* Enable vertical scrolling */
+    scrollbar-width: none;    /* For Firefox */
+}
+body::-webkit-scrollbar {
+  display: none;            /* For Chrome, Safari, and Opera */
 }
 .nav-link{
     color:whitesmoke !important;
@@ -487,8 +492,8 @@ transition: 0.5s ease-in-out;
 /* Media Queries for Responsiveness */
 @media (max-width: 576px) {
   .flip-card {
-    width: 200px; /* Smaller size on smaller screens */
-    height: 200px; /* Maintain square aspect ratio */
+    width: 250px; /* Smaller size on smaller screens */
+    height: 250px; /* Maintain square aspect ratio */
   }
   
   .flip-card-back p {
@@ -524,8 +529,8 @@ transition: 0.5s ease-in-out;
 
 @media (min-width: 576px) and (max-width: 768px) {
   .flip-card {
-    width: 200px; /* Adjust size for medium screens */
-    height: 200px; /* Maintain square aspect ratio */
+    width: 250px; /* Adjust size for medium screens */
+    height: 250px; /* Maintain square aspect ratio */
   }
   
   .flip-card-back p {
